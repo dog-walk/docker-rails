@@ -6,7 +6,7 @@ MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
 LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo" Version="1.0"
 
 # Set environment variables
-ENV RAILS_VERSION 5.0.0
+ENV RAILS_VERSION 5.0.2
 
 # Install Ruby on Rails and some gems
 RUN bash -c "source ~/.bash_profile \
