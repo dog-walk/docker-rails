@@ -13,7 +13,7 @@ RUN apt-get install -y nodejs
 RUN apt-get clean all
 
 # Set environment variables
-ENV RAILS_VERSION 5.1.0
+ENV RAILS_VERSION 5.1.1
 
 # Install Ruby on Rails and some gems
 RUN bash -c "source ~/.bash_profile \
