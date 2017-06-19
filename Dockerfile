@@ -5,8 +5,8 @@ FROM kozhin/ruby:latest
 MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
 LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo" Version="1.0"
 
-# Install NodeJS as it is required for Ruby on Rails 5.1+
-RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+# Install the latest NodeJS as it is required for Ruby on Rails 5.1+
+RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
 # Clean up package repositories
