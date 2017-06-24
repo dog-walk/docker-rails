@@ -6,10 +6,15 @@ MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
 LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo" Version="1.0"
 
 # Install the latest NodeJS as it is required for Ruby on Rails 5.1+
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-RUN apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get update && apt-get install nodejs -y
 
-# Clean up package repositories
+# Install Yarn as it is required for Ruby on Rails with Webpacker
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update && apt-get install yarn -y
+
+# Clean up
 RUN apt-get clean all
 
 # Set environment variables
