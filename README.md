@@ -1,8 +1,14 @@
+# Ruby on Rails framework inside Docker container
 
-Ruby on Rails 5 Language inside Docker container
+Use this Dockerfile to build your own images. Pre-built images you may find at <https://hub.docker.com/r/kozhin/rails/tags/> (279 Mb).
 
-Made with:
-- kozhin/ruby Docker image
+Setting RAILS_VERSION environment variable allows to install specific version of Ruby on Rails.
 
-Use RAILS_VERSION variable to install necessary RoR version.
-Use different kozhin/ruby image for different versions of Ruby.
+This image also includes the latest Node.JS and Yarn package manager.
+
+This container is made with:
+
+- Ruby on Rails (<http://rubyonrails.org>)
+- Node.JS (<https://nodejs.org>)
+- Yarn (<https://yarnpkg.com>)
+- Ruby image for Docker (<https://hub.docker.com/r/kozhin/ruby/tags/>)
