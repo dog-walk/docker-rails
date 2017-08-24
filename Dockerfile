@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install yarn -y
 RUN apt-get clean all
 
 # Set environment variables
-ENV RAILS_VERSION 5.1.2
+ENV RAILS_VERSION 5.1.3
 
 # Install Ruby on Rails and some gems
 RUN bash -c "source ~/.bash_profile \
