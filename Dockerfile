@@ -5,6 +5,9 @@ FROM kozhin/ruby:latest
 MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
 LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo" Version="1.0"
 
+# Install necessary packages
+RUN apt-get update && apt-get install libpq-dev libsqlite3-dev -y
+
 # Install the latest NodeJS as it is required for Ruby on Rails 5.1+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && apt-get install nodejs -y
@@ -18,7 +21,7 @@ RUN apt-get update && apt-get install yarn -y
 RUN apt-get clean all
 
 # Set environment variables
-ENV RAILS_VERSION 5.1.3
+ENV RAILS_VERSION 5.1.4
 
 # Install Ruby on Rails and some gems
 RUN bash -c "source ~/.bash_profile \
