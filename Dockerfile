@@ -8,9 +8,10 @@ LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo
 # Install necessary packages
 RUN apt-get update && apt-get install libpq-dev libsqlite3-dev -y
 
-# Install the latest NodeJS as it is required for Ruby on Rails 5.1+
+# Install the latest NodeJS and npm as it is required for Ruby on Rails 5.1+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && apt-get install nodejs -y
+RUN npm i npm -g
 
 # Install Yarn as it is required for Ruby on Rails with Webpacker
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
