@@ -11,12 +11,14 @@ RUN apt-get update && apt-get install libpq-dev libsqlite3-dev -y
 # Install the latest NodeJS and npm as it is required for Ruby on Rails 5.1+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && apt-get install nodejs -y
-RUN npm i npm -g
 
 # Install Yarn as it is required for Ruby on Rails with Webpacker
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install yarn -y
+
+# Update npm to the latest
+RUN yarn global add npm@latest
 
 # Clean up
 RUN apt-get clean all
