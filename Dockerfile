@@ -6,7 +6,7 @@ MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
 LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo" Version="1.0"
 
 # Install necessary packages
-RUN apt-get update && apt-get install libpq-dev libsqlite3-dev -y
+RUN apt-get update && apt-get install libsqlite3-dev -y
 
 # Install the latest NodeJS and npm as it is required for Ruby on Rails 5.1+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
