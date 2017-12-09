@@ -9,7 +9,7 @@ LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo
 RUN apt-get update && apt-get install libsqlite3-dev -y
 
 # Install the latest NodeJS and npm as it is required for Ruby on Rails 5.1+
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_9.x | bash -
 RUN apt-get update && apt-get install nodejs -y
 
 # Install Yarn as it is required for Ruby on Rails with Webpacker
