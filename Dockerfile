@@ -2,8 +2,10 @@
 FROM kozhin/ruby:latest
 
 # Set maintainer and image indo
-MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
-LABEL Description="This image contains Ruby on Rails framework" Vendor="ProfitCo" Version="1.0"
+LABEL Description="This image contains Ruby on Rails framework" \
+      Vendor="CodedRed" \
+      Version="1.0" \
+      Maintainer="Konstantin Kozhin <konstantin@codedred.com>"
 
 # Install necessary packages
 RUN apt-get update && apt-get install libsqlite3-dev -y
