@@ -26,7 +26,7 @@ RUN yarn global add npm@latest
 RUN apt-get clean all
 
 # Set environment variables
-ENV RAILS_VERSION 5.1.4
+ENV RAILS_VERSION 5.1.5
 
 # Install Ruby on Rails and some gems
 RUN bash -c "source ~/.bash_profile \
